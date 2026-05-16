@@ -42,7 +42,7 @@ or
 ```
 *Notes on running: kernel panic is possible with graphical emulation, removing `-smp` boot flag (Symmetric Multiprocessing) **might** get it working, graphical is so slow and may cause hung ups or freezing, not advised to use/run*
 
-### Default Username and password
+### Default Username and password (Bullseye)
 - *raspberry login: `pi`*
 - *Password: `raspberry`*
 
@@ -74,4 +74,7 @@ sudo losetup -D
 ---
 ### Host forwarding on port 2222
 you can ssh into the emulator using:
+```
+ssh -p 2222 pi@localhost
+```
 
