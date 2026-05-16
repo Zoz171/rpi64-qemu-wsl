@@ -4,6 +4,13 @@ Running full Raspberry Pi ARM64 OS (3B board) on QEMU on WSL on Windows (tested 
 Tested Image: `2021-10-30-raspios-bullseye-arm64`. <br>
 Board Emulated: `Raspberry Pi 3B`
 
+# System Specs Tested On
+- **OS:** Windows 10
+- **Processor:**	11th Gen Intel(R) Core(TM) i7-1165G7 @ 2.80GHz   2.80 GHz
+- **RAM:**	8.00 GB (7.79 GB usable)
+- **Storage:** 238 GB SSD UMIS RPJTJ256MEE1OWX **(WSL here)**
+ 
+
 ## Notes
 *Note: Tried to emulate the latest rpi os which is* `	2026-04-21-raspios-trixie-arm64`*, but for some reason it kept giving `kernel-panic`, tested with multiple kernel boot flags:*
 - `fsck.repair=yes rootwait modprobe.blacklist=brcmfmac sdhci.debug_quirks2=4 dwc_otg.fiq_fsm_enable=0 dwc_otg.fiq_enable=0 systemd.watchdog_device=/dev/watchdog9 systemd.crash_reboot=0 systemd.crash_shell=1`
