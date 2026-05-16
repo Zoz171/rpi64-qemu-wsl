@@ -1,0 +1,1 @@
+qemu-img resize -f raw 2021-10-30-raspios-bullseye-arm64.img 8G

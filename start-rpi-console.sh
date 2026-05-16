@@ -1,0 +1,11 @@
+qemu-system-aarch64 \
+  -M raspi3b \
+  -cpu cortex-a53 \
+  -m 1G \
+  -kernel kernel8.img \
+  -dtb bcm2710-rpi-3-b.dtb \
+  -drive id=extsd,format=raw,if=sd,file=2021-10-30-raspios-bullseye-arm64.img \
+  -append "rw earlycon=pl011,0x3f201000 console=ttyAMA0 loglevel=8 root=/dev/mmcblk0p2 rootdelay=1 dwc_otg.lpm_enable=0 dwc_otg.fiq_fsm_enable=0 dwc_otg.fiq_enable=0" \
+  -netdev user,id=net0,hostfwd=tcp::2222-:22 \
+  -device usb-net,netdev=net0 \
+  -nographic
